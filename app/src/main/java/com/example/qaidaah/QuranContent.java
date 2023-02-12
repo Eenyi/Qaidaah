@@ -238,5 +238,24 @@ public class QuranContent {
         PushtoTafseer = pushtoTafseer;
     }
 
-    String PushtoTafseer;
+    String PushtoTafseer = "";
+
+    public String translation(String key) {
+        if (key.equals("EnglishTranslation")) {
+            return getEnglishTranslation();
+        }
+        if (key.equals("UrduTranslation")) {
+            return getUrduTranslation();
+        }
+        if (key.equals("SindhiTranslation")) {
+            return getSindhiTranslation();
+        }
+        if (key.equals("HindiTranslation")) {
+            return getHindiTranslation();
+        }
+        if (key.equals("PushtoTransation")) {
+            return getPushtoTransation();
+        }
+        return "";
+    }
 }

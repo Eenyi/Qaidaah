@@ -24,7 +24,7 @@ public class JsonContext {
             is.close();
             String json = new String(buffer, "UTF-8");
             JSONArray jsonArray = new JSONArray(json);
-            for (int i = jsonArray.length() - 1; i >= 0 ; i--) {
+            for (int i = 0; i< jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 // access properties of JSONObject here
                 quranContent.number = obj.getInt("number");
@@ -58,5 +58,19 @@ public class JsonContext {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public List<ayatView> getParahContent(String name, String number, String translation, InputStream is) {
+        List<ayatView> data = new ArrayList<ayatView>();
+        List<QuranContent> bigdata = getDataFromJsonFile(is);
+        ayatView ayat = new ayatView();
+        for (QuranContent qc: bigdata) {
+            if (qc.juz.toString().equals(number)) {
+                ayat.setText(qc.text);
+                ayat.setTrans(qc.translation(translation));
+                data.add(ayat);
+            }
+        }
+        return data;
     }
 }

@@ -52,15 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         transaction.replace(R.id.menu, parahFragment);
         transaction.commit();
         jsonContext = new JsonContext();
-        try {
-            InputStream is = getAssets().open("data.txt");
-            quranContents = jsonContext.getDataFromJsonFile(is);
-            Log.d("wdwd", "adadadvewe");
-        } catch (IOException e) {
-            e.printStackTrace();
-            Log.d("eeeee", e.getMessage());
-        }
-
     }
 
     @Override

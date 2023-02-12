@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Translation">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Select Translation"
+        android:textColor="@color/peach"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <Button
+        android:id="@+id/ur"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Urdu"
+        app:layout_constraintEnd_toEndOf="@+id/en"
+        app:layout_constraintStart_toStartOf="@+id/en"
+        app:layout_constraintTop_toBottomOf="@+id/en" />
+
+    <Button
+        android:id="@+id/en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:text="English"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/sn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Sindhi"
+        app:layout_constraintEnd_toEndOf="@+id/ur"
+        app:layout_constraintStart_toStartOf="@+id/ur"
+        app:layout_constraintTop_toBottomOf="@+id/ur" />
+
+    <Button
+        android:id="@+id/hn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Hindi"
+        app:layout_constraintEnd_toEndOf="@+id/sn"
+        app:layout_constraintStart_toStartOf="@+id/sn"
+        app:layout_constraintTop_toBottomOf="@+id/sn" />
+
+    <Button
+        android:id="@+id/pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pushto"
+        app:layout_constraintEnd_toEndOf="@+id/hn"
+        app:layout_constraintStart_toStartOf="@+id/hn"
+        app:layout_constraintTop_toBottomOf="@+id/hn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
